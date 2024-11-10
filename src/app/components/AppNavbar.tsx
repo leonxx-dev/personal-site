@@ -27,7 +27,7 @@ export default function AppNavbar () {
   ];
 
   return (
-    <nav className="flex justify-between mx-auto w-full max-w-screen-xl py-4">
+    <nav className="flex justify-between py-4">
       <div>
         <Link href="/">
           <Image
@@ -43,7 +43,7 @@ export default function AppNavbar () {
       <div className="flex gap-8">
         {navLinks.map((link) => {
           const isActive = pathname === link.href
-          return <Link href={link.href} key={link.name} className={isActive ? "text-red-500" : ""}>{link.name}</Link>
+          return <Link href={link.href} key={link.name} className={`px-4 ${isActive ? "border-b-2 border-red-700" : ""}`}>{link.name}</Link>
         })}
       </div>
     </nav>

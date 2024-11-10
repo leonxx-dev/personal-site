@@ -1,8 +1,9 @@
-export default function Home() {
+import Hero from "./components/Hero";
+
+export default function HomePage() {
   return (
     <div className="flex flex-col">
-      <div>1</div>
-      <div>2</div>
+      <Hero />
     </div>
   );
 }
