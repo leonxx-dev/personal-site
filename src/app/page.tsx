@@ -10,7 +10,7 @@ export default function Home() {
         <Title>I&apos;m here to make it happen.</Title>
         <SubTitle>
           <span className="text-yellow-500">I help businesses</span> make a mark in the digital world and streamline their operations with smart software solutions.
-          &apos;re ready <span className="text-yellow-500">to get noticed online</span> or want to take the busywork out of your day-to-day life.
+         If you&apos;re ready <span className="text-yellow-500">to get noticed online</span> or want to take the busywork out of your day-to-day life.
         </SubTitle>
         <div className="mt-8">
         <Link href="/about">
