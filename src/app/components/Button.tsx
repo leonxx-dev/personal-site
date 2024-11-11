@@ -1,6 +1,6 @@
 "use client"
 
-import { robotoCondense } from "./fonts";
+import { robotoCondense } from "../fonts";
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode

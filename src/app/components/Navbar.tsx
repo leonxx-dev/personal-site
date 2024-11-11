@@ -6,9 +6,9 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { BurgerIcon, CloseIcon, GitHubIcon } from "./icons";
 import Gradient from "./fancy/GradientFancy";
-import { robotoCondense } from "./fonts";
+import { robotoCondense } from "../fonts";
 
-export default function AppNavbar () {
+export default function Navbar () {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 

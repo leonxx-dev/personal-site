@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { robotoCondense } from "./components/fonts";
+import { robotoCondense } from "./fonts";
 import "./globals.css";
-import AppNavbar from "./components/AppNavbar";
-import AppFooter from "./components/AppFooter";
+import { Navbar, Footer } from "./components";
 import { GradientFancy } from "./components/fancy";
 
 export const metadata: Metadata = {
@@ -21,11 +20,11 @@ export default function RootLayout({
         className={`${robotoCondense.className } antialiased flex flex-col min-h-screen`}
       >
         <GradientFancy />
-        <AppNavbar />
+        <Navbar />
         <main className="flex grow">
           {children}
         </main>
-        <AppFooter />
+        <Footer />
       </body>
     </html>
   );
