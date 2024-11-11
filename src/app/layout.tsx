@@ -3,6 +3,7 @@ import { robotoCondense } from "./components/fonts";
 import "./globals.css";
 import AppNavbar from "./components/AppNavbar";
 import AppFooter from "./components/AppFooter";
+import { GradientFancy } from "./components/fancy";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,6 +20,7 @@ export default function RootLayout({
       <body
         className={`${robotoCondense.className } antialiased flex flex-col min-h-screen`}
       >
+        <GradientFancy />
         <AppNavbar />
         <main className="flex grow">
           {children}

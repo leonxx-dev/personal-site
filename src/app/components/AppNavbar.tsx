@@ -4,8 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { GitHubIcon } from "./icons";
-import Gradient from "./background/Gradient";
+import { BurgerIcon, CloseIcon, GitHubIcon } from "./icons";
+import Gradient from "./fancy/GradientFancy";
+import { robotoCondense } from "./fonts";
 
 export default function AppNavbar () {
   const [open, setOpen] = useState(false);
@@ -34,7 +35,7 @@ export default function AppNavbar () {
     <header>
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <Link href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <Image 
               className="dark:invert"
@@ -44,26 +45,24 @@ export default function AppNavbar () {
               height={30}
               priority
             />
-          </a>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button type="button" className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" onClick={() => setOpen(true)}>
             <span className="sr-only">Open main menu</span>
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
+            <BurgerIcon />
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           {navLinks.map((link) => {
             const isActive = pathname === link.href
-            return <Link href={link.href} key={link.name} className={`text-sm/6 font-semibold ${isActive ? "text-red-500" : ""}`}>{link.name}</Link>
+            return <Link href={link.href} key={link.name} className={`uppercase tracking-widest hover:border-b-2 ${robotoCondense.className} ${isActive ? "border-b-2" : ""}`}>{link.name}</Link>
           })}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+          <Link href="#">
             <GitHubIcon />
-          </a>
+          </Link>
         </div>
       </nav>
       {/* <!-- Mobile menu, show/hide based on menu open state. --> */}
@@ -73,7 +72,7 @@ export default function AppNavbar () {
         <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <Gradient />
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
+            <Link href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <Image 
                 className="dark:invert"
@@ -83,26 +82,24 @@ export default function AppNavbar () {
                 height={30}
                 priority
               />
-            </a>
+            </Link>
             <button type="button" className="-m-2.5 rounded-md p-2.5 text-gray-700" onClick={() => setOpen(false)}>
               <span className="sr-only">Close menu</span>
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
-              </svg>
+              <CloseIcon />
             </button>
           </div>
           <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10">
+            <div className="-my-6 divide-y divide-white-500/10">
               <div className="space-y-2 py-6">
                 {navLinks.map((link) => {
                   const isActive = pathname === link.href
-                  return <Link href={link.href} key={link.name} className={`-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold ${isActive ? "text-red-500" : ""}`}>{link.name}</Link>
+                  return <Link href={link.href} key={link.name} className={`-mx-3 block px-3 py-2 uppercase tracking-widest hover:border-l-2 ${isActive ? "border-l-2" : ""}`}>{link.name}</Link>
                 })}
               </div>
               <div className="py-6">
-                <a href="#" className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                <Link href="#">
                   <GitHubIcon />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

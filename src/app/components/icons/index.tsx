@@ -1,5 +1,9 @@
 import GitHubIcon from "./GitHubIcon";
+import BurgerIcon from "./BurgerIcon";
+import CloseIcon from "./CloseIcon";
 
 export {
-  GitHubIcon
+  GitHubIcon,
+  BurgerIcon,
+  CloseIcon
 }
