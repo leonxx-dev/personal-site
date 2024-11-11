@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { GitHubIcon } from "./icons";
+import Gradient from "./background/Gradient";
 
 export default function AppNavbar () {
   const [open, setOpen] = useState(false);
@@ -30,13 +31,13 @@ export default function AppNavbar () {
   ];
 
   return (
-    <header className="bg-white">
+    <header>
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <Image 
-              className="h-8 w-auto"
+              className="dark:invert"
               src="/next.svg"
               alt="Brand Logo"
               width={120}
@@ -56,7 +57,7 @@ export default function AppNavbar () {
         <div className="hidden lg:flex lg:gap-x-12">
           {navLinks.map((link) => {
             const isActive = pathname === link.href
-            return <Link href={link.href} key={link.name} className={`text-sm/6 font-semibold text-gray-900 ${isActive ? "text-red-500" : ""}`}>{link.name}</Link>
+            return <Link href={link.href} key={link.name} className={`text-sm/6 font-semibold ${isActive ? "text-red-500" : ""}`}>{link.name}</Link>
           })}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -69,12 +70,13 @@ export default function AppNavbar () {
       {open && <div className="lg:hidden" role="dialog" aria-modal="true">
         {/* <!-- Background backdrop, show/hide based on slide-over state. --> */}
         <div className="fixed inset-0 z-10"></div>
-        <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <Gradient />
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <Image 
-                className="h-8 w-auto"
+                className="dark:invert"
                 src="/next.svg"
                 alt="Brand Logo"
                 width={120}
@@ -94,7 +96,7 @@ export default function AppNavbar () {
               <div className="space-y-2 py-6">
                 {navLinks.map((link) => {
                   const isActive = pathname === link.href
-                  return <Link href={link.href} key={link.name} className={`-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 ${isActive ? "text-red-500" : ""}`}>{link.name}</Link>
+                  return <Link href={link.href} key={link.name} className={`-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold ${isActive ? "text-red-500" : ""}`}>{link.name}</Link>
                 })}
               </div>
               <div className="py-6">

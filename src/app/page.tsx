@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Gradient from "./components/background/Gradient";
 
 export default function Home() {
   return (
@@ -10,9 +11,11 @@ export default function Home() {
           Nullam etiam auctor dictumst conubia lacus eros mauris eu luctus.
           Tristique porta nulla, feugiat felis feugiat tempus ultricies facilisi.
         </h2>
+        <button className="rounded bg-green-600 hover:bg-green-800 p-4">Do Something!</button>
+        <Gradient />
       </div>
       <div className="lg:basis-1/2">
-        <Image 
+        <Image
           src="/trump.jpg"
           alt=""
           width={2000}
