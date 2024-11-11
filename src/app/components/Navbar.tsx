@@ -60,7 +60,7 @@ export default function Navbar () {
           })}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link href="#">
+          <Link href="https://github.com/leonxx-dev" rel="noopener noreferrer" target="_blank">
             <GitHubIcon />
           </Link>
         </div>
@@ -97,7 +97,7 @@ export default function Navbar () {
                 })}
               </div>
               <div className="py-6">
-                <Link href="#">
+                <Link href="https://github.com/leonxx-dev" rel="noopener noreferrer" target="_blank">
                   <GitHubIcon />
                 </Link>
               </div>
