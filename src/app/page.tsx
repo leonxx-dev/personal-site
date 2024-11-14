@@ -12,7 +12,7 @@ export default function Home() {
           If you&apos;re ready <span className="text-yellow-500">to get noticed online</span> or want to take the busywork out of your day-to-day life.
         </Typography>
         <div className="mt-8">
-        <Link href="/about">
+        <Link href="/contact">
           <Button>
             Contact
           </Button>

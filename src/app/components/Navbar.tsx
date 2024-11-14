@@ -28,6 +28,10 @@ export default function Navbar () {
     {
       href: "/blog",
       name: "Blog"
+    },
+    {
+      href: "/contact",
+      name: "Contact"
     }
   ];
 
