@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { BurgerIcon, CloseIcon, GitHubIcon } from "./icons";
-import Gradient from "./fancy/GradientFancy";
 import { robotoCondense } from "../fonts";
 
 export default function Navbar () {
@@ -60,7 +59,7 @@ export default function Navbar () {
         <div className="hidden lg:flex lg:gap-x-12">
           {navLinks.map((link) => {
             const isActive = pathname === link.href
-            return <Link href={link.href} key={link.name} className={`uppercase tracking-widest hover:border-b-2 ${robotoCondense.className} ${isActive ? "border-b-2" : ""}`}>{link.name}</Link>
+            return <Link href={link.href} key={link.name} className={`uppercase tracking-widest hover:border-b-2 hover:border-primary ${robotoCondense.className} ${isActive ? "border-b-2 border-primary" : ""}`}>{link.name}</Link>
           })}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -73,8 +72,7 @@ export default function Navbar () {
       {open && <div className="lg:hidden" role="dialog" aria-modal="true">
         {/* <!-- Background backdrop, show/hide based on slide-over state. --> */}
         <div className="fixed inset-0 z-10"></div>
-        <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <Gradient />
+        <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <Link href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
@@ -97,7 +95,7 @@ export default function Navbar () {
               <div className="space-y-2 py-6">
                 {navLinks.map((link) => {
                   const isActive = pathname === link.href
-                  return <Link href={link.href} key={link.name} className={`-mx-3 block px-3 py-2 uppercase tracking-widest hover:border-l-2 ${isActive ? "border-l-2" : ""}`}>{link.name}</Link>
+                  return <Link href={link.href} key={link.name} className={`-mx-3 block px-3 py-2 uppercase tracking-widest hover:border-l-2 hover:border-primary ${isActive ? "border-l-2 border-primary" : ""}`}>{link.name}</Link>
                 })}
               </div>
               <div className="py-6">
