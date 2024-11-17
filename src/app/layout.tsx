@@ -19,7 +19,6 @@ export default function RootLayout({
       <body
         className={`${robotoCondense.className } antialiased flex flex-col min-h-screen`}
       >
-        <GradientFancy />
         <Navbar />
         <main className="flex grow">
           {children}

@@ -9,6 +9,6 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 
 export default function Button({ children, ...rest }: ButtonProps) {
   return (
-    <button {...rest} className={`p-4 rounded bg-green-700 uppercase tracking-widest hover:bg-green-800 ${robotoCondense.className}`}>{ children }</button>
+    <button {...rest} className={`p-4 rounded bg-primary uppercase tracking-widest hover:bg-green-800 ${robotoCondense.className}`}>{ children }</button>
   );
 }

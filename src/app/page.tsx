@@ -8,8 +8,8 @@ export default function Home() {
       <div  className="lg:basis-1/2 self-center space-y-8">
         <Typography type="title">I&apos;m here to make it happen.</Typography>
         <Typography type="subtitle">
-          <span className="text-yellow-500">I help businesses</span> make a mark in the digital world and streamline their operations with smart software solutions.
-          If you&apos;re ready <span className="text-yellow-500">to get noticed online</span> or want to take the busywork out of your day-to-day life.
+          <span className="text-accent">I help businesses</span> make a mark in the digital world and streamline their operations with smart software solutions.
+          If you&apos;re ready <span className="text-accent">to get noticed online</span> or want to take the busywork out of your day-to-day life.
         </Typography>
         <div className="mt-8">
         <Link href="/contact">
