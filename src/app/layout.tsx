@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { robotoCondense } from "./fonts";
 import "./globals.css";
 import { Navbar, Footer } from "./components";
-import { GradientFancy } from "./components/fancy";
 
 export const metadata: Metadata = {
   title: "Create Next App",
