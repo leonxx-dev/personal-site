@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Navbar, Footer } from "./components";
+import { Header, Footer } from "./components";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -12,12 +12,39 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const navLinks = [
+    {
+      href: "/",
+      name: "Home",
+    },
+    {
+      href: "/about",
+      name: "About"
+    },
+    {
+      href: "/portfolio",
+      name: "Portfolio"
+    },
+    {
+      href: "/resume",
+      name: "Resume"
+    },
+    {
+      href: "/blog",
+      name: "Blog"
+    },
+    {
+      href: "/contact",
+      name: "Contact"
+    }
+  ];
+
   return (
     <html lang="en">
       <body
         className={"antialiased"}
       >
-        <Navbar />
+        <Header navLinks={navLinks} />
         {children}
         <Footer />
       </body>

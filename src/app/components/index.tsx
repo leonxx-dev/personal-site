@@ -1,9 +1,11 @@
 import ActionButton from "./ActionButton";
 import Footer from "./Footer";
-import Navbar from "./Navbar";
+import Header from "./Header";
+import CompanyLogo from "./CompanyLogo";
 
 export {
   ActionButton,
   Footer,
-  Navbar
+  Header,
+  CompanyLogo
 };
