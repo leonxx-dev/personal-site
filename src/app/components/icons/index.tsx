@@ -5,5 +5,5 @@ import CloseIcon from "./CloseIcon";
 export {
   GitHubIcon,
   BurgerIcon,
-  CloseIcon
-}
+  CloseIcon,
+};
