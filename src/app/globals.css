@@ -8,10 +8,44 @@
   --primary: #F4511E;
   --secondary: #4E342E;
   --accent: #FF5722;
+  --font-heading: var(--font-roboto-condensed);
+  --font-body: var(--font-roboto);
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+}
+
+h1 {
+  font-family: var(--font-heading);
+  @apply text-7xl font-bold tracking-tight;
+}
+
+h2 {
+  font-family: var(--font-heading);
+  @apply text-2xl uppercase tracking-widest;
+}
+
+h3 {
+  font-family: var(--font-heading);
+  @apply text-xl font-semibold tracking-wide;
+}
+
+h4 {
+  font-family: var(--font-heading);
+  @apply text-lg font-medium tracking-wide;
+}
+
+h5 {
+  font-family: var(--font-heading);
+}
+
+h6 {
+  font-family: var(--font-heading);
+}
+
+p {
+  @apply text-base;
 }

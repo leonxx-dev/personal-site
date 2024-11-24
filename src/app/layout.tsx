@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { robotoCondense } from "./fonts";
-import "./globals.css";
 import { Navbar, Footer } from "./components";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,12 +15,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${robotoCondense.className } antialiased flex flex-col min-h-screen`}
+        className={"antialiased"}
       >
         <Navbar />
-        <main className="flex grow">
-          {children}
-        </main>
+        {children}
         <Footer />
       </body>
     </html>

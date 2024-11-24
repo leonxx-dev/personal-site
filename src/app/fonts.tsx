@@ -1,6 +1,18 @@
-import { Roboto_Condensed } from 'next/font/google'
+import { Roboto_Condensed, Roboto } from "next/font/google";
 
-export const robotoCondense = Roboto_Condensed({
-  subsets: ['latin'],
-  display: 'swap',
-})
+const robotoCondensed = Roboto_Condensed({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-roboto-condensed"
+});
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-roboto"
+});
+
+export {
+  robotoCondensed,
+  roboto
+};

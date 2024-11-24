@@ -1,11 +1,9 @@
-import Button from "./Button";
+import ActionButton from "./ActionButton";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import Typography from "./Typography";
 
 export {
-  Button,
+  ActionButton,
   Footer,
-  Navbar,
-  Typography
+  Navbar
 };
