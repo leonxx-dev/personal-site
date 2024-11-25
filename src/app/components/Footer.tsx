@@ -5,7 +5,7 @@ import config from "../config";
 export default function Footer () {
   return (
     <footer className="py-8">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-6 flex justify-between">
         {/* <!-- Contact Section --> */}
         <div>
           <h3 className="mb-4">Contact Me</h3>
