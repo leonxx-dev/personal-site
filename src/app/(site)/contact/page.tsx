@@ -6,7 +6,7 @@ import config from "@/app/config";
 export default function ContactPage() {
   return (
     <main  className="flex flex-col max-w-4xl p-4 mx-auto items-center">
-      <section className="flex flex-col items-center my-4 md:my-10 relative">
+      <section className="flex items-center my-4 md:my-10 relative">
         <div className="absolute w-full h-full bg-gradient-to-br from-sky-500 to-transparent opacity-40 rounded-full blur-2xl -z-10"></div>
         {/* One dot gradient */}
         {/* <div className="absolute bottom-0 right-1/4 w-48 h-48 bg-gradient-to-tr from-blue-500 to-transparent opacity-40 rounded-full blur-2xl -z-10"></div> */}
