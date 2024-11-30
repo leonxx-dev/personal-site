@@ -5,7 +5,7 @@ export default function CloseIcon() {
       fill="none"
       viewBox="0 0 24 24"
       strokeWidth="1.5"
-      stroke="var(--foreground)"
+      stroke="currentColor"
       aria-hidden="true"
       data-slot="icon"
     >

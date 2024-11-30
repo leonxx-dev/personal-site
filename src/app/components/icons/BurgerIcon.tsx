@@ -5,7 +5,7 @@ export default function BurgerIcon() {
       fill="none"
       viewBox="0 0 24 24"
       strokeWidth="1.5"
-      stroke="var(--foreground)"
+      stroke="currentColor"
       className="h-6 w-6"
       data-slot="icon"
     >

@@ -4,6 +4,7 @@ const config = {
     links: {
       github: process.env.GITHUB_LINK,
       linkedin: process.env.LINKEDIN_LINK,
+      telegram: process.env.TELEGRAM_LINK,
     }
   },
 };

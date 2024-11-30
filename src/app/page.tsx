@@ -18,7 +18,7 @@ export default function Home() {
               <Link
                 href="/portfolio"
                 aria-current="page"
-                className="px-6 py-3 bg-orange-600 rounded-lg shadow-lg hover:bg-orange-700 focus:outline-none focus:ring focus:ring-orange-300"
+                className="px-6 py-3 text-whit bg-orange-600 rounded-lg shadow-lg hover:bg-orange-700 focus:outline-none focus:ring focus:ring-orange-300"
               >
                 View My Work
               </Link>

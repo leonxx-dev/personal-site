@@ -22,17 +22,17 @@ export default function RootLayout({
       name: "About"
     },
     {
-      href: "/portfolio",
-      name: "Portfolio"
+      href: "/work",
+      name: "Work"
     },
-    {
-      href: "/resume",
-      name: "Resume"
-    },
-    {
-      href: "/blog",
-      name: "Blog"
-    },
+    // {
+    //   href: "/resume",
+    //   name: "Resume"
+    // },
+    // {
+    //   href: "/blog",
+    //   name: "Blog"
+    // },
     {
       href: "/contact",
       name: "Contact"
@@ -42,10 +42,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={"antialiased"}
+        className={"antialiased min-h-screen flex flex-col"}
       >
         <Header navLinks={navLinks} />
-        {children}
+        <div className="flex-grow">
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
